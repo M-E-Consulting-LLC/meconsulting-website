@@ -5,6 +5,13 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# PREVIEW ONLY: keep the whole site out of search engines until launch.
+# Remove this block when meconsulting.com points here.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 # Keep the admin page out of search engines
 [[headers]]
   for = "/admin/*"
