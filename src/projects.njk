@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Projects
+nav: projects
+permalink: /projects/
+description: "MEP and technology engineering projects by M&E Consulting across higher education, K–12, healthcare, federal, military, aviation, commercial, industrial, athletics and civic markets."
+---
+<section class="page-intro">
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <h1>Work our clients trusted us with.</h1>
+    <p class="lead">Pick a market to see our projects. Each one credits the architect we partnered with and shows the systems M&amp;E designed. Click a photo to see it larger.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 56px;">
+  <div class="wrap" data-tabs>
+    <div class="tabs" role="tablist" aria-label="Markets">
+      {%- for m in markets %}
+      {%- set count = (collections.projects | inMarket(m)).length %}
+      {%- if count %}
+      <button type="button" role="tab" id="tab-{{ m | slugify }}" aria-controls="{{ m | slugify }}" aria-selected="{{ 'true' if loop.first else 'false' }}" {% if not loop.first %}tabindex="-1"{% endif %}>{{ m }}</button>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    {%- for m in markets %}
+    {%- set list = collections.projects | inMarket(m) %}
+    {%- if list.length %}
+    <div class="tab-panel" role="tabpanel" id="{{ m | slugify }}" aria-labelledby="tab-{{ m | slugify }}" {% if not loop.first %}hidden{% endif %}>
+      <h2 class="display" style="font-size: clamp(32px, 4vw, 44px); margin-bottom: 24px;">{{ m }}</h2>
+      <div class="cards">
+        {%- for p in list %}{% include "project-card.njk" %}{% endfor %}
+      </div>
+    </div>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+</section>
+
+{% include "contact-band.njk" %}

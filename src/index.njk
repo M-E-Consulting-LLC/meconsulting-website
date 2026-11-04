@@ -1,0 +1,178 @@
+---
+layout: base.njk
+nav: home
+description: "M&E Consulting designs mechanical, electrical, plumbing, fire protection and technology systems for schools, hospitals, airports, military and commercial facilities across Louisiana and Texas. SDVOSB since 1997."
+---
+{%- set slides = [] -%}
+{%- for s in home.hero_slides -%}
+  {%- set hp = collections.projects | projectBySlug(s.project) -%}
+  {%- if hp -%}{%- set _ = slides.push({ photo: s.photo or hp.data.photos[0], focus: s.focus or "50% 50%", title: hp.data.title, details: hp.data.details, systems: hp.data.systems }) -%}{%- endif -%}
+{%- endfor -%}
+
+<section class="blueprint-dark on-dark" aria-label="Introduction">
+  <div class="wrap hero-top">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ home.hero_eyebrow }}</p>
+      <h1 class="hero-title">{{ home.hero_headline }}</h1>
+      <p class="hero-intro">{{ home.hero_intro }}</p>
+      <div class="hero-ctas">
+        <a class="btn btn-sky" href="/contact/">Start a Project</a>
+        <a class="btn btn-outline light" href="/projects/">See Our Work</a>
+      </div>
+    </div>
+    <dl class="stats">
+      {%- for st in home.stats %}<div><dt>{{ st.label }}</dt><dd{% if st.value.length > 9 %} class="small"{% endif %}>{{ st.value }}</dd></div>{% endfor %}
+      <div class="cert"><dt>Certified</dt><dd><img src="/images/sba-sdvosb.jpg" alt="SBA Service-Disabled Veteran-Owned certified">SDVOSB · Hudson Initiative</dd></div>
+    </dl>
+  </div>
+
+  {%- if slides.length %}
+  <div class="hero-stage" data-hero>
+    {%- for s in slides %}
+    <img src="{{ s.photo }}" alt="{{ s.title }}" style="object-position: {{ s.focus }}" class="{% if loop.first %}active{% endif %}" {% if not loop.first %}loading="lazy"{% endif %}>
+    {%- endfor %}
+  </div>
+  <div class="wrap hero-caption">
+    <div data-hero-captions>
+      {%- for s in slides %}
+      <div {% if not loop.first %}hidden{% endif %}>
+        <span class="name">{{ s.title }}</span>
+        <span class="meta">{{ s.details }}</span>
+        <ul class="chips boxed" aria-label="Systems M&amp;E designed" style="margin-top: 10px;">
+          {%- for k in s.systems %}{% if disciplines[k] %}<li><img src="{{ disciplines[k].icon }}" alt="">{{ disciplines[k].label }}</li>{% endif %}{% endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+    {%- if slides.length > 1 %}
+    <div class="hero-controls">
+      <button type="button" class="icon-btn" data-hero-prev aria-label="Previous project"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <span class="hero-counter mono" data-hero-counter aria-live="polite">01 / 0{{ slides.length }}</span>
+      <button type="button" class="icon-btn" data-hero-next aria-label="Next project"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    {%- endif %}
+  </div>
+  {%- endif %}
+</section>
+
+<section id="services" class="section blueprint-light">
+  <div class="wrap split">
+    <div class="side">
+      <p class="eyebrow">Services</p>
+      <h2 class="display">{{ home.services_heading }}</h2>
+      <p class="lead">{{ home.services_intro }}</p>
+      <div class="dim" aria-hidden="true"><span class="tick"></span><span class="rule"></span><span class="txt">{{ home.services.length }} DISCIPLINES</span><span class="rule"></span><span class="tick"></span></div>
+    </div>
+    <ul class="services main">
+      {%- for s in home.services %}
+      <li><img src="{{ s.icon }}" alt=""><span class="name">{{ s.name }}</span><span class="txt">{{ s.text }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- set fp = collections.projects | projectBySlug(home.featured_project) -%}
+{%- if fp %}
+<section class="section band-wash" aria-labelledby="feat-h">
+  <div class="wrap split">
+    <div class="main feature-photos" data-feature data-title="{{ fp.data.title }}" data-gallery="{{ fp.data.photos | json }}">
+      <button type="button" class="feature-main" data-feature-open aria-label="Enlarge photo">
+        <img src="{{ fp.data.photos[0] }}" alt="{{ fp.data.title }}" data-feature-img>
+      </button>
+      {%- if fp.data.photos.length > 1 %}
+      <div class="feature-thumbs" role="group" aria-label="Project photos">
+        {%- for ph in fp.data.photos %}{% if loop.index <= 5 %}
+        <button type="button" data-feature-thumb="{{ loop.index0 }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" aria-label="Show photo {{ loop.index }}"><img src="{{ ph }}" alt="" loading="lazy"></button>
+        {%- endif %}{% endfor %}
+      </div>
+      {%- endif %}
+    </div>
+    <div class="side">
+      <p class="eyebrow">Featured Project</p>
+      <h2 id="feat-h" class="display" style="font-size: clamp(36px, 4vw, 52px); line-height: 1;">{{ fp.data.title }}</h2>
+      <dl class="facts">
+        {%- if fp.data.details %}<dt>Project</dt><dd>{{ fp.data.details }}</dd>{% endif %}
+        {%- if home.featured_photographer %}<dt>Photography</dt><dd>{{ home.featured_photographer }}</dd>{% endif %}
+        <dt>Market</dt><dd>{{ fp.data.market }}</dd>
+      </dl>
+      <ul class="chips boxed" aria-label="Systems M&amp;E designed">
+        {%- for k in fp.data.systems %}{% if disciplines[k] %}<li><img src="{{ disciplines[k].icon }}" alt="">{{ disciplines[k].label }}</li>{% endif %}{% endfor %}
+      </ul>
+      {%- if home.featured_story %}<p class="lead">{{ home.featured_story }}</p>{% endif %}
+      <a href="/projects/#{{ fp.data.market | slugify }}" style="font-weight: 600;">More {{ fp.data.market }} projects →</a>
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="display">Built across every market.</h2>
+      </div>
+      <a class="btn btn-outline" href="/projects/">All Projects by Market</a>
+    </div>
+    <div class="cards large">
+      {%- for slug in home.selected_work %}
+        {%- set p = collections.projects | projectBySlug(slug) -%}
+        {%- if p %}{% include "project-card.njk" %}{% endif -%}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section blueprint-light" style="border-top: 1px solid var(--line);" aria-labelledby="map-h">
+  <div class="wrap split" style="align-items: center;">
+    <div class="side">
+      <p class="eyebrow">Where We Work</p>
+      <h2 id="map-h" class="display">{{ home.map_heading }}</h2>
+      <p class="lead">{{ home.map_intro }}</p>
+      <ul class="map-key" aria-label="Map key">
+        <li><span class="sw" style="background: var(--blue);" aria-hidden="true"></span><span><strong>Active licenses</strong><span class="txt">{{ home.licensed_states }}</span></span></li>
+        <li><span class="sw" style="background: var(--sky);" aria-hidden="true"></span><span><strong>Work completed</strong><span class="txt">{{ home.work_states }}</span></span></li>
+        <li><svg class="sw" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><polygon points="12,1.5 14.8,8.6 22.5,9 16.5,13.8 18.5,21.3 12,17 5.5,21.3 7.5,13.8 1.5,9 9.2,8.6" fill="#153752"/></svg><span><strong>Offices</strong><span class="txt">Lafayette, LA · Houston, TX</span></span></li>
+      </ul>
+    </div>
+    <figure class="main" style="margin: 0;">
+      <img src="/images/where-we-work-map.svg" alt="U.S. map showing states where M&amp;E holds active licenses ({{ home.licensed_states }}), states with completed work ({{ home.work_states }}), and offices in Lafayette and Houston." width="960" height="600">
+    </figure>
+  </div>
+</section>
+
+<section id="process" class="section blueprint-dark on-dark">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <p class="eyebrow">The M&amp;E Proven Process</p>
+      <h2 class="display">Define. Design. Deliver.</h2>
+    </div>
+    <div class="steps">
+      {%- for s in home.process %}
+      <div class="step">
+        <div class="dim" aria-hidden="true"><span class="tick"></span><span class="rule"></span><span class="tick"></span></div>
+        <span class="num">0{{ loop.index }}</span>
+        <span class="name">{{ s.step }}</span>
+        <p>{{ s.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    {%- if site.proven_process %}<a href="{{ site.proven_process }}" style="color: #fff; font-weight: 600;">Read the Proven Process (PDF) →</a>{% endif %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="culture-h">
+  <div class="wrap section-head" style="margin-bottom: 0;">
+    <div>
+      <p class="eyebrow">Our Culture</p>
+      <h2 id="culture-h" class="display">{{ home.culture_heading }}</h2>
+      <p class="lead">{{ home.culture_text }}</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; flex-direction: row;">
+      <a class="btn btn-primary" href="/team/">Meet the Team</a>
+      <a class="btn btn-outline" href="/careers/">We're Hiring</a>
+    </div>
+  </div>
+</section>
+
+{% include "contact-band.njk" %}

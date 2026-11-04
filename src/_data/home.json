@@ -1,0 +1,50 @@
+{
+  "hero_eyebrow": "MEP & Technology Engineering · Since 1997",
+  "hero_headline": "Engineering Environments.",
+  "hero_intro": "The power, comfort, water and life-safety systems inside the buildings Louisiana and Texas depend on. Designed by one firm, coordinated with your architect, and seen through to closeout.",
+  "stats": [
+    { "label": "Projects", "value": "5,000+" },
+    { "label": "Since", "value": "1997" },
+    { "label": "Offices", "value": "Lafayette · Houston" }
+  ],
+  "hero_slides": [
+    { "project": "lafayette-regional-airport-new-terminal", "photo": "/images/projects/lafayette-regional-airport-new-terminal/02.jpg", "focus": "50% 50%" },
+    { "project": "mcneese-state-university-student-union", "photo": "/images/projects/mcneese-state-university-student-union/01.jpg", "focus": "50% 75%" },
+    { "project": "southeastern-louisiana-university-d-vickers-hall", "photo": "/images/projects/southeastern-louisiana-university-d-vickers-hall/01.jpg", "focus": "50% 60%" }
+  ],
+  "services_heading": "Every system a building depends on.",
+  "services_intro": "Mechanical, electrical, plumbing, fire protection and the technology systems that tie a facility together, so architects and owners coordinate with one firm from kickoff to closeout.",
+  "services": [
+    { "name": "HVAC", "icon": "/images/icons/hvac.svg", "text": "New systems, equipment assessments and temporary cooling during transitions." },
+    { "name": "Plumbing", "icon": "/images/icons/plumbing.svg", "text": "Domestic water, sanitary, storm, and water and wastewater systems." },
+    { "name": "Fire Protection", "icon": "/images/icons/fire-protection.svg", "text": "Sprinkler systems coordinated with the building's life-safety design." },
+    { "name": "Power & Emergency Power", "icon": "/images/icons/electrical.svg", "text": "Service, distribution, generators and standby power." },
+    { "name": "Lighting", "icon": "/images/icons/lighting.svg", "text": "Interior, exterior and sports lighting, with controls." },
+    { "name": "Fire Alarm", "icon": "/images/icons/fire-alarm.svg", "text": "Addressable fire alarm and emergency voice/alarm communication." },
+    { "name": "Security", "icon": "/images/icons/security.svg", "text": "Surveillance, intrusion detection and access control." },
+    { "name": "Structured Cabling", "icon": "/images/icons/special-systems.svg", "text": "Voice, data, intercom, paging and low-voltage infrastructure." },
+    { "name": "Water / Wastewater", "icon": "/images/icons/water.svg", "text": "Systems for municipal and facility clients." }
+  ],
+  "featured_project": "mcneese-state-university-student-union",
+  "featured_photographer": "Chipper Hatter",
+  "featured_story": "",
+  "selected_work": [
+    "first-national-bank",
+    "childrens-museum-and-ldwf-nature-and-science-center-at-port-wonder",
+    "southern-urology",
+    "lang-readiness-center-lafayette",
+    "broussard-sports-complex-st-julien-park",
+    "turner-industries"
+  ],
+  "map_heading": "Licensed in 9 states. Built in 12 more.",
+  "map_intro": "From our offices in Lafayette and Houston, we've delivered projects from the Gulf Coast to the Pacific Northwest. Need help somewhere new? Ask us.",
+  "licensed_states": "AL · AR · FL · LA · MS · MT · OK · TX · WA",
+  "work_states": "AZ · IL · MO · NM · NY · OH · PA · SC · SD · UT · VA · WY",
+  "process": [
+    { "step": "Define", "text": "Understand the owner's goals, the existing conditions and the code requirements before design starts." },
+    { "step": "Design", "text": "Coordinate every MEP and technology system with the architect into clear, biddable construction documents." },
+    { "step": "Deliver", "text": "Stay with the project through bidding and construction: submittals, RFIs and site observations to closeout." }
+  ],
+  "culture_heading": "Two offices. One family.",
+  "culture_text": "Be humbly confident. Build open and honest relationships. Respond on time. Be intelligently inquisitive. Our core focus: providing comfort and protection to mankind."
+}

@@ -1,0 +1,56 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Keep the admin page out of search engines
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# Photos and icons rarely change; let browsers cache them
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Old Squarespace addresses → new pages
+[[redirects]]
+  from = "/thefamily"
+  to = "/team/"
+  status = 301
+[[redirects]]
+  from = "/mecareers"
+  to = "/careers/"
+  status = 301
+[[redirects]]
+  from = "/mechprojengr"
+  to = "/careers/"
+  status = 301
+[[redirects]]
+  from = "/mep-commissioning-agent-lafayette"
+  to = "/careers/"
+  status = 301
+[[redirects]]
+  from = "/elecprojmang"
+  to = "/careers/"
+  status = 301
+[[redirects]]
+  from = "/ca-qaqc-lafayette-1"
+  to = "/careers/"
+  status = 301
+[[redirects]]
+  from = "/hvac-designer-lafayette"
+  to = "/careers/"
+  status = 301
+[[redirects]]
+  from = "/plumbing-designer-lafayette"
+  to = "/careers/"
+  status = 301
+[[redirects]]
+  from = "/electrical-designer-lafayette"
+  to = "/careers/"
+  status = 301

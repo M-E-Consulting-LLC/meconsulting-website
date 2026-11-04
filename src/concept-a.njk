@@ -1,0 +1,151 @@
+---
+permalink: /concept-a/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Concept A (for review) | {{ site.name }}</title>
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+  /* Concept A: the cleaner first design. Shares content and cards with the main site. */
+  body { font-family: Aptos, Calibri, 'Segoe UI', Arial, sans-serif; }
+  .a-review { background: #fff4d6; color: #5a4300; text-align: center; font-size: 14px; padding: 8px 16px; }
+  .a-review a { color: #5a4300; font-weight: 700; }
+  .a-util { background: var(--navy); color: #fff; font-size: 13px; }
+  .a-util .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 8px; padding-bottom: 8px; }
+  .a-util a { color: #fff; text-decoration: none; }
+  .a-header { border-bottom: 1px solid var(--steel); background: #fff; }
+  .a-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-top: 14px; padding-bottom: 14px; }
+  .a-header nav { display: flex; flex-wrap: wrap; gap: 4px 28px; align-items: center; font-weight: 700; font-size: 15px; }
+  .a-header nav a:not(.btn) { color: var(--navy); text-decoration: none; padding: 10px 0; }
+  .a-rule { height: 4px; background: var(--sky); }
+  .a-band { background: var(--blue); color: #fff; align-self: flex-start; padding: 6px 14px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; display: inline-block; }
+  .a-h1 { color: var(--navy); font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 700; }
+  .a-h2 { color: var(--navy); font-size: 36px; line-height: 1.15; font-weight: 700; }
+  .a-hero { background: var(--wash); }
+  .a-hero .wrap { padding-top: 72px; padding-bottom: 72px; display: flex; flex-direction: column; gap: 22px; }
+  .a-proof { background: var(--blue); color: #fff; }
+  .a-proof .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; padding-top: 36px; padding-bottom: 36px; }
+  .a-proof b { display: block; font-size: 40px; line-height: 1.1; }
+  .a-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .a-services div { background: #fff; padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .a-services h3 { color: var(--navy); font-size: 19px; }
+  .a-services img { width: 32px; height: 32px; }
+  .a-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .a-steps div { border-top: 4px solid var(--sky); padding-top: 18px; display: flex; flex-direction: column; gap: 8px; }
+  .a-steps b { color: var(--blue); font-size: 14px; letter-spacing: .1em; }
+  .a-values { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--blue); border: 1px solid var(--blue); }
+  .a-values li { background: var(--navy); padding: 20px; font-size: 17px; font-weight: 700; }
+  .card-body h3 { font-family: inherit; text-transform: none; font-size: 18px; }
+  .card-photo .tag { font-family: inherit; }
+</style>
+</head>
+<body>
+<div class="a-review">Design review: this is <strong>Concept A</strong>, the cleaner first design. <a href="/">See Concept B (main site)</a></div>
+<div class="a-util"><div class="wrap"><span>SBA-CERTIFIED SERVICE-DISABLED VETERAN-OWNED SMALL BUSINESS · HUDSON INITIATIVE CERTIFIED</span><span><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a> · Lafayette · Houston</span></div></div>
+<header class="a-header">
+  <div class="wrap">
+    <a href="/concept-a/"><img src="/images/me-logo.jpg" alt="M&amp;E Consulting, LLC" style="height: 56px; width: auto;"></a>
+    <nav aria-label="Main">
+      <a href="#a-services">Services</a><a href="#a-markets">Markets &amp; Projects</a><a href="#a-process">Our Process</a><a href="/team/">Our Team</a><a href="/careers/">Careers</a>
+      <a class="btn btn-primary" href="/contact/">Start a Project</a>
+    </nav>
+  </div>
+  <div class="a-rule"></div>
+</header>
+
+<section class="a-hero">
+  <div class="wrap">
+    <p style="color: var(--blue); font-weight: 700; font-size: 14px; letter-spacing: .12em;">MEP &amp; TECHNOLOGY ENGINEERING · SINCE 1997</p>
+    <h1 class="a-h1">Engineering Environments.</h1>
+    <p style="font-size: 19px; max-width: 34em;">Mechanical, electrical, plumbing, fire protection and technology systems design for schools, hospitals, airports, military and commercial facilities across Louisiana and Texas.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+      <a class="btn btn-primary" href="/contact/">Start a Project</a>
+      <a class="btn btn-outline" href="{{ site.capability_statement }}">Capability Statement (PDF)</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px;"><img src="/images/sba-sdvosb.jpg" alt="SBA Service-Disabled Veteran-Owned certified" style="height: 52px; width: auto;"><span style="font-size: 14px;">SDVOSB · {{ site.federal_ids }}</span></div>
+    <figure style="margin: 12px 0 0;">
+      <img src="/images/projects/lafayette-regional-airport-new-terminal/02.jpg" alt="Lafayette Regional Airport new terminal" style="width: 100%; height: auto; border: 1px solid var(--line);">
+      <figcaption style="background: #fff; border: 1px solid var(--line); border-top: 0; padding: 12px 16px; font-size: 14px;"><strong style="color: var(--navy);">Lafayette Regional Airport, new terminal</strong> · Architect: MBSB / RS&amp;H</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="a-proof" aria-label="At a glance"><div class="wrap">
+  <div><b>1997</b>Designing building systems since</div>
+  <div><b>5,000+</b>Projects completed in multiple states</div>
+  <div><b>2 offices</b>Lafayette &amp; Houston, with staff in Baton Rouge</div>
+  <div><b>SDVOSB</b>SBA certified · Hudson Initiative certified</div>
+</div></section>
+
+<section id="a-services" class="section">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px;">
+      <span class="a-band">Services</span>
+      <h2 class="a-h2">Every system a building depends on, under one roof.</h2>
+      <p style="font-size: 17px;">Our team covers the job from start to finish, so architects and owners coordinate with one firm.</p>
+    </div>
+    <div class="a-services">
+      {%- for s in home.services %}<div><img src="{{ s.icon }}" alt=""><h3>{{ s.name }}</h3><p style="font-size: 15px;">{{ s.text }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="a-markets" class="section" style="background: var(--tint);">
+  <div class="wrap" data-tabs>
+    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px; margin-bottom: 28px;">
+      <span class="a-band">Markets &amp; Projects</span>
+      <h2 class="a-h2">Work our clients trusted us with.</h2>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Markets">
+      {%- for m in markets %}{% if (collections.projects | inMarket(m)).length %}
+      <button type="button" role="tab" id="atab-{{ m | slugify }}" aria-controls="a-{{ m | slugify }}" aria-selected="{{ 'true' if loop.first else 'false' }}" {% if not loop.first %}tabindex="-1"{% endif %}>{{ m }}</button>
+      {%- endif %}{% endfor %}
+    </div>
+    {%- for m in markets %}{% set list = collections.projects | inMarket(m) %}{% if list.length %}
+    <div class="tab-panel" role="tabpanel" id="a-{{ m | slugify }}" aria-labelledby="atab-{{ m | slugify }}" {% if not loop.first %}hidden{% endif %}>
+      <div class="cards">{% for p in list %}{% include "project-card.njk" %}{% endfor %}</div>
+    </div>
+    {%- endif %}{% endfor %}
+  </div>
+</section>
+
+<section id="a-process" class="section">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+    <span class="a-band">The M&amp;E Proven Process</span>
+    <h2 class="a-h2">Define. Design. Deliver.</h2>
+    <div class="a-steps">{% for s in home.process %}<div><b>0{{ loop.index }} · {{ s.step | upper }}</b><p>{{ s.text }}</p></div>{% endfor %}</div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--navy); color: #fff;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px;">
+    <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 16px;">
+      <p style="color: var(--sky); font-size: 13px; font-weight: 700; letter-spacing: .12em;">OUR CULTURE</p>
+      <h2 class="a-h2" style="color: #fff;">We're all in.</h2>
+      <p style="font-size: 17px;">A unified approach is the backbone of how we work. Our core focus: <strong>providing comfort and protection to mankind.</strong></p>
+      <a class="btn btn-outline light" href="/team/" style="align-self: flex-start;">Meet the Team</a>
+    </div>
+    <ul class="a-values" style="flex: 1 1 400px;">
+      <li>Be humbly confident</li><li>Build a healthy and positive team</li><li>Build open and honest relationships</li><li>Respond and deliver on time</li><li>Be intelligently inquisitive</li><li>Bring peaceful solutions</li>
+    </ul>
+  </div>
+</section>
+
+{% include "contact-band.njk" %}
+
+<footer class="site-footer"><div class="wrap footer-legal mono" style="padding-top: 20px;">© {{ "" | year }} {{ site.name | upper }} · CONCEPT A FOR DESIGN REVIEW</div></footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
+  <div class="viewer-top"><div><strong id="viewer-title"></strong><span id="viewer-count" class="mono"></span></div><button type="button" class="icon-btn" data-viewer-close aria-label="Close photos"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="viewer-stage"><button type="button" class="icon-btn" data-viewer-prev aria-label="Previous photo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><img id="viewer-img" alt=""><button type="button" class="icon-btn" data-viewer-next aria-label="Next photo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button></div>
+  <div class="viewer-thumbs" id="viewer-thumbs" role="group" aria-label="All photos"></div>
+</div>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

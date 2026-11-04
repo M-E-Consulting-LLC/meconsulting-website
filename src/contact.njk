@@ -1,0 +1,43 @@
+---
+layout: base.njk
+title: Contact
+permalink: /contact/
+description: "Contact M&E Consulting in Lafayette, LA and Houston, TX about your next MEP or technology engineering project."
+---
+<section class="page-intro">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Tell us about your project.</h1>
+    <p class="lead">Licensed in multiple states. Ask if you need help somewhere new.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="side">
+      {%- for o in site.offices %}
+      <div style="border: 1px solid var(--line); background: var(--wash); padding: 20px;">
+        <strong style="color: var(--navy);">{{ o.name }}</strong>
+        <p>{{ o.street }}<br>{{ o.city }}</p>
+      </div>
+      {%- endfor %}
+      <a href="tel:{{ site.phone_link }}" style="font-family: var(--display); font-size: 36px; font-weight: 700; color: var(--navy); text-decoration: none; line-height: 1;">{{ site.phone }}</a>
+      <p style="font-size: 15px;">{{ site.hours }}</p>
+    </div>
+    <form class="form main" name="project-inquiry" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company-website">
+      <input type="hidden" name="form-name" value="project-inquiry">
+      <p class="hp"><label>Leave this empty <input name="company-website"></label></p>
+      <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-firm">Firm / organization</label><input id="f-firm" name="firm" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field full"><label for="f-type">Project type</label>
+        <select id="f-type" name="project-type">
+          <option>New construction</option><option>Renovation / addition</option><option>Existing systems assessment</option><option>Generator / emergency power</option><option>Fire alarm or security upgrade</option><option>Other</option>
+        </select>
+      </div>
+      <div class="field full"><label for="f-msg">Project details</label><textarea id="f-msg" name="message" rows="6"></textarea></div>
+      <div class="full"><button type="submit" class="btn btn-primary">Send Message</button></div>
+    </form>
+  </div>
+</section>

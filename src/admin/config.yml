@@ -1,0 +1,230 @@
+# Admin page configuration (Sveltia CMS)
+# Everything here edits files in this repository. Saving commits the change,
+# and Netlify rebuilds the live site automatically in about a minute.
+
+backend:
+  name: github
+  repo: meconsulting/meconsulting-website   # update if the GitHub organization or repo name differs
+  branch: main
+  base_url: https://api.netlify.com         # Netlify's built-in GitHub sign-in
+  auth_endpoint: auth
+  commit_messages:
+    create: 'Add {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Remove {{collection}} "{{slug}}"'
+    uploadMedia: 'Upload "{{path}}"'
+    deleteMedia: 'Delete "{{path}}"'
+
+site_url: https://www.meconsulting.com
+display_url: https://www.meconsulting.com
+logo_url: /images/me-logo.jpg
+
+media_folder: src/images/uploads
+public_folder: /images/uploads
+
+media_libraries:
+  default:
+    config:
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1800
+          height: 1800
+
+collections:
+  # ---------------- Projects ----------------
+  - name: projects
+    label: Projects
+    label_singular: Project
+    description: Each project shows up as a card on the Projects page, under its market tab. The first photo is the card photo; visitors can click through the rest.
+    folder: src/projects
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    slug: '{{title}}'
+    media_folder: /src/images/projects
+    public_folder: /images/projects
+    summary: '{{title}} · {{market}}'
+    sortable_fields: [title, market, order]
+    view_groups:
+      - { label: Market, field: market }
+    fields:
+      - { label: Project name, name: title, widget: string }
+      - label: Market
+        name: market
+        widget: select
+        options: [Higher Education, K–12, Healthcare, Federal / VA, Military, Aviation, Commercial, Industrial, Athletics, Civic & Liturgical]
+      - { label: Location and architect, name: details, widget: string, required: false, hint: 'Example: Lafayette, LA · Architect: MBSB' }
+      - label: Status
+        name: status
+        widget: select
+        required: false
+        default: ''
+        hint: Leave blank for completed projects.
+        options:
+          - { label: Completed, value: '' }
+          - { label: In design, value: In design }
+          - { label: Under construction, value: Under construction }
+      - label: Systems M&E designed
+        name: systems
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: HVAC, value: hvac }
+          - { label: Plumbing, value: plumbing }
+          - { label: Fire Protection, value: fire-protection }
+          - { label: Electrical, value: electrical }
+          - { label: Lighting, value: lighting }
+          - { label: Fire Alarm, value: fire-alarm }
+          - { label: Special Systems, value: special-systems }
+      - label: Photos
+        name: photos
+        widget: list
+        required: false
+        hint: The first photo is the card photo. Drag to reorder. Wide exterior shots work best first.
+        field: { label: Photo, name: photo, widget: image }
+      - { label: Sort order, name: order, widget: number, value_type: int, default: 50, hint: Lower numbers show first within the market. }
+
+  # ---------------- Team ----------------
+  - name: team
+    label: Team
+    label_singular: Team member
+    description: Everyone on the Our Team page. Leadership members show with a bio; everyone else shows in the team grid.
+    folder: src/team
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    slug: '{{name}}'
+    identifier_field: name
+    media_folder: /src/images/team
+    public_folder: /images/team
+    summary: '{{name}} · {{title}}'
+    sortable_fields: [name, department, order]
+    view_groups:
+      - { label: Department, field: department }
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Credentials, name: credentials, widget: string, required: false, hint: 'Example: P.E. or E.I.' }
+      - { label: Job title, name: title, widget: string }
+      - label: Department
+        name: department
+        widget: select
+        options: [Leadership, Electrical, Mechanical, Field & Office]
+      - { label: Email, name: email, widget: string, required: false }
+      - { label: Headshot, name: photo, widget: image, required: false, hint: A portrait photo. It will be shown in a 4:5 frame. }
+      - { label: Special note (Leadership only), name: note, widget: string, required: false, hint: 'Example: U.S. Army Combat Veteran · 100% DAV' }
+      - { label: Bio (Leadership only), name: body, widget: text, required: false }
+      - { label: Sort order, name: order, widget: number, value_type: int, default: 50 }
+
+  # ---------------- Careers ----------------
+  - name: jobs
+    label: Job Openings
+    label_singular: Job opening
+    description: Open positions on the Careers page. Turn off "Show on website" when a position is filled.
+    folder: src/jobs
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    slug: '{{title}}'
+    summary: '{{title}} · {{location}}'
+    fields:
+      - { label: Job title, name: title, widget: string }
+      - { label: Show on website, name: open, widget: boolean, default: true }
+      - { label: Location, name: location, widget: string, hint: 'Example: Lafayette, LA or Houston, TX' }
+      - label: Office filter
+        name: offices
+        widget: select
+        multiple: true
+        options: [Lafayette, Houston]
+      - { label: Job type, name: type, widget: string, default: Full-time }
+      - { label: Summary, name: summary, widget: text }
+      - { label: What you'll do, name: duties, widget: list, field: { label: Duty, name: duty, widget: string } }
+      - { label: What you bring, name: qualifications, widget: list, field: { label: Qualification, name: qualification, widget: string } }
+      - { label: Send applications to, name: apply_to, widget: string, default: 'skye@meconsulting.com, dustin@meconsulting.com', hint: Separate several emails with commas. }
+      - { label: Email subject line, name: subject, widget: string, hint: 'Example: Electrical Designer - [Your Name]' }
+      - { label: Sort order, name: order, widget: number, value_type: int, default: 50 }
+
+  # ---------------- Site settings ----------------
+  - name: settings
+    label: Site Settings
+    description: The homepage and company details.
+    files:
+      - name: home
+        label: Homepage
+        file: src/_data/home.json
+        media_folder: /src/images/uploads
+        public_folder: /images/uploads
+        fields:
+          - { label: Small label above the headline, name: hero_eyebrow, widget: string }
+          - { label: Headline, name: hero_headline, widget: string }
+          - { label: Intro paragraph, name: hero_intro, widget: text }
+          - label: Stats
+            name: stats
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Value, name: value, widget: string }
+          - label: Hero slideshow
+            name: hero_slides
+            widget: list
+            hint: Each slide shows one project's photo across the full width, with its name and systems below.
+            fields:
+              - { label: Project, name: project, widget: relation, collection: projects, value_field: '{{slug}}', search_fields: [title], display_fields: [title] }
+              - { label: Photo (leave empty to use the project's first photo), name: photo, widget: image, required: false }
+              - { label: Photo focus, name: focus, widget: string, required: false, default: 50% 50%, hint: 'Which part of the photo stays visible: "50% 50%" is the center, "50% 75%" favors the lower part.' }
+          - { label: Services heading, name: services_heading, widget: string }
+          - { label: Services intro, name: services_intro, widget: text }
+          - label: Services
+            name: services
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Icon, name: icon, widget: image }
+              - { label: Description, name: text, widget: string }
+          - { label: Featured project, name: featured_project, widget: relation, collection: projects, value_field: '{{slug}}', search_fields: [title], display_fields: [title] }
+          - { label: Featured project photographer, name: featured_photographer, widget: string, required: false }
+          - { label: Featured project story, name: featured_story, widget: text, required: false, hint: "Two sentences: the challenge, and what M&E's systems made possible." }
+          - { label: Selected work (homepage tiles), name: selected_work, widget: relation, collection: projects, value_field: '{{slug}}', search_fields: [title], display_fields: [title], multiple: true }
+          - { label: Map heading, name: map_heading, widget: string }
+          - { label: Map intro, name: map_intro, widget: text }
+          - { label: Licensed states, name: licensed_states, widget: string }
+          - { label: Work-completed states, name: work_states, widget: string }
+          - label: Process steps
+            name: process
+            widget: list
+            fields:
+              - { label: Step, name: step, widget: string }
+              - { label: Description, name: text, widget: text }
+          - { label: Culture heading, name: culture_heading, widget: string }
+          - { label: Culture text, name: culture_text, widget: text }
+      - name: site
+        label: Company Details
+        file: src/_data/site.json
+        fields:
+          - { label: Company name, name: name, widget: string }
+          - { label: Short name, name: short_name, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Website address, name: url, widget: string }
+          - { label: Search-engine description, name: description, widget: text }
+          - { label: Phone (as shown), name: phone, widget: string }
+          - { label: Phone (digits for dialing), name: phone_link, widget: string, hint: 'Example: +13372347474' }
+          - { label: Contact-form emails go to, name: inquiry_email, widget: string, hint: Set the actual notification address in Netlify under Forms → Notifications. }
+          - { label: Office hours, name: hours, widget: string }
+          - label: Offices
+            name: offices
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Street, name: street, widget: string }
+              - { label: 'City, state, ZIP', name: city, widget: string }
+          - { label: Certifications line, name: certifications, widget: string }
+          - { label: Federal IDs, name: federal_ids, widget: string }
+          - { label: Memberships, name: memberships, widget: list }
+          - { label: LinkedIn URL, name: linkedin, widget: string }
+          - { label: Capability statement link, name: capability_statement, widget: string, required: false }
+          - { label: Proven Process link, name: proven_process, widget: string, required: false }

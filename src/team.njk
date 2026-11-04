@@ -1,0 +1,68 @@
+---
+layout: base.njk
+title: Our Team
+nav: team
+permalink: /team/
+description: "Meet the engineers, designers and staff of M&E Consulting in Lafayette, Louisiana and Houston, Texas."
+---
+{%- set leaders = collections.team | byDept("Leadership") -%}
+<section class="page-intro">
+  <div class="wrap">
+    <p class="eyebrow">Our Team</p>
+    <h1>The people behind the drawings.</h1>
+    <p class="lead">Our M&amp;E team members are part of a family. Engineers, designers, field staff and office staff in Lafayette and Houston, working together on every project from first meeting to closeout.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" style="margin-bottom: 24px;">Leadership</p>
+    <div class="leaders">
+      {%- for l in leaders %}
+      <article class="leader">
+        {%- if l.data.photo %}<img src="{{ l.data.photo }}" alt="{{ l.data.name }}" loading="lazy">{% endif %}
+        <div class="body">
+          <h2>{{ l.data.name }}{% if l.data.credentials %}<small>, {{ l.data.credentials }}</small>{% endif %}</h2>
+          <p class="role">{{ l.data.title }}</p>
+          {%- if l.data.note %}<p class="note">{{ l.data.note | upper }}</p>{% endif %}
+          <div class="bio">{{ l.content | safe }}</div>
+          {%- if l.data.email %}<a class="mail" href="mailto:{{ l.data.email }}">Email {{ l.data.name | firstName }} →</a>{% endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--tint);">
+  <div class="wrap" data-filter>
+    <p class="eyebrow" style="margin-bottom: 20px;">The Team</p>
+    <div class="tabs" role="group" aria-label="Filter team by department">
+      {%- for d in ["All", "Electrical", "Mechanical", "Field & Office"] %}
+      <button type="button" data-filter-value="{{ d }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ d }}</button>
+      {%- endfor %}
+    </div>
+    <div class="people">
+      {%- for p in collections.team %}{% if p.data.department != "Leadership" %}
+      <article class="person" data-dept="{{ p.data.department }}">
+        {%- if p.data.photo %}<img src="{{ p.data.photo }}" alt="{{ p.data.name }}" loading="lazy">{% else %}<div class="initials" aria-hidden="true">{{ p.data.name | initials }}</div>{% endif %}
+        <div class="body">
+          <h3>{{ p.data.name }}{% if p.data.credentials %}, {{ p.data.credentials }}{% endif %}</h3>
+          <p>{{ p.data.title }}</p>
+          {%- if p.data.email %}<a href="mailto:{{ p.data.email }}">Email {{ p.data.name | firstName }}</a>{% endif %}
+        </div>
+      </article>
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap section-head" style="margin-bottom: 0; align-items: center;">
+    <div>
+      <h2 class="display" style="font-size: clamp(32px, 4vw, 48px);">Want to be part of the family?</h2>
+      <p class="lead">We're hiring engineers, designers and field staff in Lafayette and Houston.</p>
+    </div>
+    <a class="btn btn-primary" href="/careers/">See Open Positions</a>
+  </div>
+</section>

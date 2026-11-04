@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} | {% endif %}{{ site.name }} · {{ site.tagline }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/images/projects/lafayette-regional-airport-new-terminal/02.jpg">
+<link rel="icon" href="/favicon.png">
+<link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"{{ site.name }}","url":"{{ site.url }}","telephone":"{{ site.phone }}","address":{"@type":"PostalAddress","streetAddress":"1304 Bertrand Drive, Suite F7","addressLocality":"Lafayette","addressRegion":"LA","postalCode":"70506","addressCountry":"US"}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="/"><img src="/images/me-logo.jpg" alt="M&amp;E Consulting, LLC — home" width="72" height="52"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/#services" {% if nav == 'services' %}aria-current="page"{% endif %}>Services</a>
+      <a href="/projects/" {% if nav == 'projects' %}aria-current="page"{% endif %}>Projects</a>
+      <a href="/#process">Process</a>
+      <a href="/team/" {% if nav == 'team' %}aria-current="page"{% endif %}>Our Team</a>
+      <a href="/careers/" {% if nav == 'careers' %}aria-current="page"{% endif %}>Careers</a>
+      <a class="nav-phone mono" href="tel:{{ site.phone_link }}">{{ site.phone }}</a>
+      <a class="btn btn-primary" href="/contact/">Start a Project</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <span class="logo-plate"><img src="/images/me-logo.jpg" alt="M&amp;E Consulting, LLC" width="66" height="48"></span>
+      <span>{{ site.name }} · {{ site.tagline }}</span>
+      <span class="sba-plate"><img src="/images/sba-sdvosb.jpg" alt="SBA Service-Disabled Veteran-Owned certified" width="46" height="56"></span>
+    </div>
+    <div>
+      <p class="label">Offices</p>
+      {% for o in site.offices %}<p>{{ o.street }}, {{ o.city }}</p>{% endfor %}
+      <p><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></p>
+    </div>
+    <div>
+      <p class="label">Memberships</p>
+      <p>{{ site.memberships | join(" · ") }}</p>
+      <p><a href="{{ site.linkedin }}">LinkedIn</a></p>
+    </div>
+  </div>
+  <div class="wrap footer-legal mono">© {{ "" | year }} {{ site.name | upper }} · SDVOSB · {{ site.federal_ids }}</div>
+</footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
+  <div class="viewer-top">
+    <div><strong id="viewer-title"></strong><span id="viewer-count" class="mono"></span></div>
+    <button type="button" class="icon-btn" data-viewer-close aria-label="Close photos"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="viewer-stage">
+    <button type="button" class="icon-btn" data-viewer-prev aria-label="Previous photo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <img id="viewer-img" alt="">
+    <button type="button" class="icon-btn" data-viewer-next aria-label="Next photo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+  </div>
+  <div class="viewer-thumbs" id="viewer-thumbs" role="group" aria-label="All photos"></div>
+</div>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>

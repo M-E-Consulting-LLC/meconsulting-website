@@ -1,0 +1,15 @@
+---
+title: "DeSoto Regional Hospital"
+market: "Healthcare"
+details: "Architect: Grace Hebert Curtis"
+status: ""
+systems:
+  - hvac
+  - plumbing
+  - fire-protection
+  - electrical
+  - fire-alarm
+  - special-systems
+photos: []
+order: 1
+---

@@ -1,0 +1,9 @@
+{
+  "hvac": { "label": "HVAC", "icon": "/images/icons/hvac.svg" },
+  "plumbing": { "label": "Plumbing", "icon": "/images/icons/plumbing.svg" },
+  "fire-protection": { "label": "Fire Protection", "icon": "/images/icons/fire-protection.svg" },
+  "electrical": { "label": "Electrical", "icon": "/images/icons/electrical.svg" },
+  "lighting": { "label": "Lighting", "icon": "/images/icons/lighting.svg" },
+  "fire-alarm": { "label": "Fire Alarm", "icon": "/images/icons/fire-alarm.svg" },
+  "special-systems": { "label": "Special Systems", "icon": "/images/icons/special-systems.svg" }
+}

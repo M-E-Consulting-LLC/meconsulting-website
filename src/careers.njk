@@ -1,0 +1,83 @@
+---
+layout: base.njk
+title: Careers
+nav: careers
+permalink: /careers/
+description: "Engineering and design careers at M&E Consulting in Lafayette, Louisiana and Houston, Texas."
+---
+<section class="page-intro">
+  <div class="wrap" style="flex-direction: row; flex-wrap: wrap; align-items: flex-end; gap: 32px 56px;">
+    <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+      <p class="eyebrow">Careers</p>
+      <h1>We believe in a work / family balance.</h1>
+      <p class="lead">Our team members are part of a family, and our leadership values family life. Trust, honesty and respect are the backbone of how we work, and our success is built on the health of that family.</p>
+    </div>
+    <p class="mono" style="font-size: 14px; color: var(--navy);">{{ collections.jobs.length }} OPEN POSITION{% if collections.jobs.length != 1 %}S{% endif %} · LAFAYETTE &amp; HOUSTON</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" data-filter>
+    <div class="section-head" style="align-items: center; margin-bottom: 24px;">
+      <div><p class="eyebrow">Open Positions</p></div>
+      <div class="tabs" role="group" aria-label="Filter positions by office" style="margin: 0;">
+        {%- for o in ["All offices", "Lafayette", "Houston"] %}
+        <button type="button" data-filter-value="{{ 'All' if loop.first else o }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ o }}</button>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- if collections.jobs.length %}
+    <div class="jobs">
+      {%- for j in collections.jobs %}
+      <article class="job" data-dept="{{ j.data.offices | join('|') }}">
+        <button type="button" class="job-head" aria-expanded="{{ 'true' if loop.first else 'false' }}" aria-controls="job-{{ j.fileSlug }}">
+          <span><span class="t">{{ j.data.title }}</span><span class="m">{{ j.data.location }} · {{ j.data.type }}</span></span>
+          <span class="toggle" aria-hidden="true">{{ 'HIDE DETAILS −' if loop.first else 'VIEW DETAILS +' }}</span>
+        </button>
+        <div class="job-body" id="job-{{ j.fileSlug }}" {% if not loop.first %}hidden{% endif %}>
+          <p style="margin-top: 16px; max-width: 52em;">{{ j.data.summary }}</p>
+          <div class="job-cols">
+            <div><h3>WHAT YOU'LL DO</h3><ul>{% for d in j.data.duties %}<li>{{ d }}</li>{% endfor %}</ul></div>
+            <div><h3>WHAT YOU BRING</h3><ul>{% for q in j.data.qualifications %}<li>{{ q }}</li>{% endfor %}</ul></div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center;">
+            <a class="btn btn-primary" href="{{ j.data.apply_to | mailtoSubject(j.data.subject) }}">Apply by Email</a>
+            <span style="font-size: 14px;">Send your resume and cover letter with the subject line “{{ j.data.subject }}”.</span>
+          </div>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+    {%- else %}
+    <p class="lead">There are no open positions right now, but we're always glad to hear from engineers and designers. Send your resume to <a href="mailto:skye@meconsulting.com">skye@meconsulting.com</a>.</p>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section blueprint-dark on-dark">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 28px;">
+    <p class="eyebrow">Benefits</p>
+    <h2 class="display" style="font-size: clamp(34px, 4vw, 48px);">What every M&amp;E team member gets.</h2>
+    <ul class="benefits">
+      <li>Competitive salary and performance bonuses</li>
+      <li>Health, dental and vision insurance</li>
+      <li>Retirement plan with company match</li>
+      <li>Paid time off and holidays</li>
+      <li>Professional development and continuing education</li>
+      <li>Health allowance</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap section-head" style="margin-bottom: 0; align-items: center;">
+    <div>
+      <h2 class="display" style="font-size: clamp(32px, 4vw, 48px);">Don't see the right fit?</h2>
+      <p class="lead">We're always glad to hear from engineers, designers and students. Send us your resume and tell us what you're looking for.</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; flex-direction: row;">
+      <a class="btn btn-primary" href="mailto:skye@meconsulting.com?subject=General%20Application">Send Your Resume</a>
+      <a class="btn btn-outline" href="/team/">Meet the Team</a>
+    </div>
+  </div>
+</section>

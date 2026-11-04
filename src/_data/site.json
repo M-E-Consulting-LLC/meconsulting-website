@@ -1,0 +1,21 @@
+{
+  "name": "M&E Consulting, LLC",
+  "short_name": "M&E",
+  "tagline": "Engineering Environments",
+  "url": "https://www.meconsulting.com",
+  "description": "M&E Consulting is a mechanical, electrical, plumbing and technology (MEPT) engineering firm in Lafayette, Louisiana and Houston, Texas. Service-Disabled Veteran-Owned Small Business, since 1997.",
+  "phone": "(337) 234-7474",
+  "phone_link": "+13372347474",
+  "inquiry_email": "dustin@meconsulting.com",
+  "hours": "Mon–Thu 7:00 am – 5:00 pm · Fri 7:00 – 11:00 am",
+  "offices": [
+    { "name": "Lafayette (HQ)", "street": "1304 Bertrand Drive, Suite F7", "city": "Lafayette, LA 70506" },
+    { "name": "Houston", "street": "13201 Northwest Freeway, Suite 633", "city": "Houston, TX 77040" }
+  ],
+  "certifications": "SBA-Certified Service-Disabled Veteran-Owned Small Business · Hudson Initiative Certified",
+  "federal_ids": "CAGE 86GH1 · UEI CWVJVXPSBM64 · NAICS 541330",
+  "memberships": ["AIA Louisiana", "One Acadiana", "NSPE", "Louisiana Engineering Society"],
+  "linkedin": "https://www.linkedin.com/company/m-e-consulting-inc",
+  "capability_statement": "https://www.meconsulting.com/s/2026_ME-LLC_Capability-Statement.pdf",
+  "proven_process": "https://www.meconsulting.com/s/2026_The-Proven-Process.pdf"
+}
