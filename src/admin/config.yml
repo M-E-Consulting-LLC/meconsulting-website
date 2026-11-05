@@ -4,7 +4,7 @@
 
 backend:
   name: github
-  repo: meconsulting/meconsulting-website   # update if the GitHub organization or repo name differs
+  repo: M-E-Consulting-LLC/meconsulting-website   # update if the GitHub organization or repo name differs
   branch: main
   base_url: https://api.netlify.com         # Netlify's built-in GitHub sign-in
   auth_endpoint: auth
@@ -193,7 +193,7 @@ collections:
           - { label: Map heading, name: map_heading, widget: string }
           - { label: Map intro, name: map_intro, widget: text }
           - { label: Licensed states, name: licensed_states, widget: string }
-          - { label: Work-completed states, name: work_states, widget: string }
+          - { label: Licensed, work-completed states, name: work_states, widget: string }
           - label: Process steps
             name: process
             widget: list
