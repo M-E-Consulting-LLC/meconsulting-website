@@ -226,5 +226,5 @@ collections:
           - { label: Federal IDs, name: federal_ids, widget: string }
           - { label: Memberships, name: memberships, widget: list }
           - { label: LinkedIn URL, name: linkedin, widget: string }
-          - { label: Capability statement link, name: capability_statement, widget: string, required: false }
-          - { label: Proven Process link, name: proven_process, widget: string, required: false }
+          - { label: Capability statement (PDF), name: capability_statement, widget: file, required: false, media_folder: /src/downloads, public_folder: /downloads, hint: "Upload a new PDF to replace the current one." }
+          - { label: Proven Process (PDF), name: proven_process, widget: file, required: false, media_folder: /src/downloads, public_folder: /downloads, hint: "Upload a new PDF to replace the current one." }

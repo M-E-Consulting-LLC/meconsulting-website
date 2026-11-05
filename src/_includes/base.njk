@@ -61,6 +61,8 @@
       <p class="label">Memberships</p>
       <p>{{ site.memberships | join(" · ") }}</p>
       <p><a href="{{ site.linkedin }}">LinkedIn</a></p>
+      {%- if site.capability_statement %}
+      <p><a href="{{ site.capability_statement }}">Capability Statement (PDF)</a></p>{% endif %}
     </div>
   </div>
   <div class="wrap footer-legal mono">© {{ "" | year }} {{ site.name | upper }} · SDVOSB · {{ site.federal_ids }}</div>
