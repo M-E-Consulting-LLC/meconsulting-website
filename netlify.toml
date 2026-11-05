@@ -61,3 +61,7 @@
   from = "/electrical-designer-lafayette"
   to = "/careers/"
   status = 301
+[[redirects]]
+  from = "/concept-a/*"
+  to = "/"
+  status = 301

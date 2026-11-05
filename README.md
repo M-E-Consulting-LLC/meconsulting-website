@@ -26,7 +26,6 @@ Click **Save**. The live site updates on its own in about a minute.
 - `src/images/` – photos (projects, team, icons)
 - `src/admin/` – the admin page (Sveltia CMS, hosted with the site)
 - `src/css/site.css`, `src/js/site.js` – the design and interactions
-- `src/concept-a.njk` – the earlier design, kept at `/concept-a/` for review
 
 ## For developers
 
