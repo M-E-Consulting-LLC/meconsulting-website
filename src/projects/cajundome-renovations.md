@@ -10,6 +10,9 @@ systems:
   - lighting
   - fire-alarm
   - special-systems
-photos: []
+photos:
+  - /images/projects/cajundome-renovations/01.jpg
+  - /images/projects/cajundome-renovations/02.jpg
+  - /images/projects/cajundome-renovations/03.jpg
 order: 6
 ---
