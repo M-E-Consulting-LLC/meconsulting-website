@@ -1,8 +1,8 @@
 ---
-title: "Southern Urology"
-market: "Healthcare"
-details: "Architect: ACSW"
-status: ""
+title: Southern Urology MOB
+market: Healthcare
+details: 'Architect: ACSW'
+status: ''
 systems:
   - hvac
   - plumbing
@@ -12,7 +12,7 @@ systems:
   - fire-alarm
   - special-systems
 photos:
-  - "/images/projects/southern-urology/01.jpg"
-  - "/images/projects/southern-urology/02.jpg"
+  - /images/projects/southern-urology/01.jpg
+  - /images/projects/southern-urology/02.jpg
 order: 5
 ---
