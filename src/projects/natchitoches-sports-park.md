@@ -1,8 +1,8 @@
 ---
-title: "Natchitoches Sports Park"
-market: "Athletics"
-details: "Natchitoches, LA"
-status: ""
+title: Natchitoches Sports Park (Parc Natchitoches)
+market: Athletics
+details: 'Natchitoches, LA - Architect: WHLC'
+status: ''
 systems:
   - hvac
   - plumbing
