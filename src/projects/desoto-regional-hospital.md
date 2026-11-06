@@ -11,6 +11,7 @@ systems:
   - fire-alarm
   - special-systems
   - lighting
-photos: []
+photos:
+  - /images/projects/desoto-regional-hospital/01.jpg
 order: 1
 ---
