@@ -61,6 +61,8 @@
       <p class="label">Memberships</p>
       <p>{{ site.memberships | join(" · ") }}</p>
       <p><a href="{{ site.linkedin }}">LinkedIn</a></p>
+      {%- if site.facebook %}
+      <p><a href="{{ site.facebook }}">Facebook</a></p>{% endif %}
       {%- if site.capability_statement %}
       <p><a href="{{ site.capability_statement }}">Capability Statement (PDF)</a></p>{% endif %}
     </div>
