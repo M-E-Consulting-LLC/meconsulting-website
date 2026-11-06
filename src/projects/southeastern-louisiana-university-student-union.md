@@ -10,7 +10,6 @@ systems:
   - fire-protection
   - lighting
   - fire-alarm
-  - special-systems
 photos:
   - /images/projects/southeastern-louisiana-university-student-union/01.jpg
 order: 6
