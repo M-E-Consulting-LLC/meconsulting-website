@@ -2,7 +2,7 @@
 title: UL Lafayette New Engineering Building
 market: Higher Education
 details: 'Lafayette, LA · Architects: The Sellers Group / Holly & Smith Architects'
-status: ''
+status: Under construction
 systems:
   - hvac
   - plumbing
