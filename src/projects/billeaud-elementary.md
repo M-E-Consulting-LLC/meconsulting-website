@@ -1,8 +1,8 @@
 ---
-title: "Billeaud Elementary"
-market: "K–12"
-details: ""
-status: ""
+title: LPSS Martial F. Billeaud Elementary School
+market: K–12
+details: ''
+status: ''
 systems:
   - hvac
   - plumbing
@@ -12,6 +12,6 @@ systems:
   - fire-alarm
   - special-systems
 photos:
-  - "/images/projects/billeaud-elementary/01.jpg"
+  - /images/projects/billeaud-elementary/01.jpg
 order: 2
 ---
