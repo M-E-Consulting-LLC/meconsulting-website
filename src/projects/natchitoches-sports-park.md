@@ -8,6 +8,7 @@ systems:
   - plumbing
   - electrical
   - lighting
-photos: []
+photos:
+  - /images/projects/natchitoches-sports-park/01.jpg
 order: 5
 ---
