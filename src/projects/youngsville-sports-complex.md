@@ -8,6 +8,8 @@ systems:
   - plumbing
   - electrical
   - lighting
-photos: []
+photos:
+  - /images/projects/youngsville-sports-complex/01.jpg
+  - /images/projects/youngsville-sports-complex/02.jpg
 order: 4
 ---
