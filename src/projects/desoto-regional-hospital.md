@@ -1,7 +1,7 @@
 ---
 title: DeSoto Regional Hospital
 market: Healthcare
-details: 'Mansfield, LA - Architect: Grace Design Studios'
+details: 'Mansfield, LA · Architect: Grace Design Studios'
 status: Under construction
 systems:
   - hvac
