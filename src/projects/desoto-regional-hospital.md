@@ -1,8 +1,8 @@
 ---
 title: DeSoto Regional Hospital
 market: Healthcare
-details: 'Architect: Grace Hebert Curtis'
-status: ''
+details: 'Mansfield, LA - Architect: Grace Design Studios'
+status: Under construction
 systems:
   - hvac
   - plumbing
