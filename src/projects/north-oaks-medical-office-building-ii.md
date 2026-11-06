@@ -7,6 +7,7 @@ systems:
   - electrical
   - lighting
   - fire-alarm
+  - special-systems
 photos:
   - /images/projects/north-oaks-medical-office-building-ii/01.jpg
   - /images/projects/north-oaks-medical-office-building-ii/02.jpg
