@@ -1,8 +1,8 @@
 ---
-title: "Live Oak Elementary School"
-market: "K–12"
-details: ""
-status: ""
+title: LPSS Live Oak Elementary School
+market: K–12
+details: ''
+status: ''
 systems:
   - hvac
   - plumbing
@@ -12,6 +12,6 @@ systems:
   - fire-alarm
   - special-systems
 photos:
-  - "/images/projects/live-oak-elementary-school/01.jpg"
+  - /images/projects/live-oak-elementary-school/01.jpg
 order: 4
 ---
