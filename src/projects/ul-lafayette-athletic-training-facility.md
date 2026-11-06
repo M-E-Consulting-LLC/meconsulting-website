@@ -1,8 +1,8 @@
 ---
-title: "UL Lafayette Athletic Training Facility"
-market: "Athletics"
-details: "Lafayette, LA · Architect: Architects Southwest"
-status: ""
+title: UL Lafayette Student-Athlete Performance Center
+market: Athletics
+details: 'Lafayette, LA · Architect: Architects Southwest'
+status: ''
 systems:
   - hvac
   - plumbing
@@ -11,6 +11,6 @@ systems:
   - lighting
   - special-systems
 photos:
-  - "/images/projects/ul-lafayette-athletic-training-facility/01.jpg"
+  - /images/projects/ul-lafayette-athletic-training-facility/01.jpg
 order: 2
 ---
