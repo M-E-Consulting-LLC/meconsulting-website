@@ -1,14 +1,15 @@
 ---
-title: "First National Bank"
-market: "Commercial"
-details: "Monroe, LA · Architect: Architects Southwest"
-status: ""
+title: First National Bank
+market: Commercial
+details: 'Monroe, LA · Architect: Architects Southwest'
+status: ''
 systems:
   - hvac
   - plumbing
   - electrical
+  - lighting
 photos:
-  - "/images/projects/first-national-bank/01.jpg"
-  - "/images/projects/first-national-bank/02.jpg"
+  - /images/projects/first-national-bank/01.jpg
+  - /images/projects/first-national-bank/02.jpg
 order: 4
 ---
