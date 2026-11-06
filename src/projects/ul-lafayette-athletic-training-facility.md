@@ -10,6 +10,7 @@ systems:
   - electrical
   - lighting
   - special-systems
+  - fire-alarm
 photos:
   - /images/projects/ul-lafayette-athletic-training-facility/01.jpg
 order: 2
