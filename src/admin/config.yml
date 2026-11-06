@@ -55,7 +55,7 @@ collections:
       - label: Market
         name: market
         widget: select
-        options: [Higher Education, K–12, Healthcare, Federal / VA, Military, Aviation, Commercial, Industrial, Athletics, Civic & Liturgical]
+        options: [Higher Education, K–12, Healthcare, Federal / VA, Military, Aviation, Commercial, Industrial, Water / Wastewater, Athletics, Civic & Liturgical]
       - { label: Location and architect, name: details, widget: string, required: false, hint: 'Example: Lafayette, LA · Architect: MBSB' }
       - label: Status
         name: status
