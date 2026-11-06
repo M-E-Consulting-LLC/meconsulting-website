@@ -1,8 +1,8 @@
 ---
-title: "CGI Technology Building"
-market: "Commercial"
-details: "Lafayette, LA · Architect: ACSW"
-status: ""
+title: CGI Technologies Building
+market: Commercial
+details: 'Lafayette, LA · Architect: ACSW'
+status: ''
 systems:
   - hvac
   - plumbing
@@ -12,6 +12,6 @@ systems:
   - fire-alarm
   - special-systems
 photos:
-  - "/images/projects/cgi-technology-building/01.jpg"
+  - /images/projects/cgi-technology-building/01.jpg
 order: 3
 ---
