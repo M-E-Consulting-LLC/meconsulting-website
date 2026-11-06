@@ -10,6 +10,7 @@ systems:
   - electrical
   - lighting
   - special-systems
+  - fire-alarm
 photos:
   - /images/projects/lafayette-main-public-library-renovation/01.jpg
 order: 3
