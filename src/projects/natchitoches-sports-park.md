@@ -1,7 +1,7 @@
 ---
 title: Natchitoches Sports Park (Parc Natchitoches)
 market: Athletics
-details: 'Natchitoches, LA - Architect: WHLC'
+details: 'Natchitoches, LA · Architect: WHLC'
 status: ''
 systems:
   - hvac

@@ -1,7 +1,7 @@
 ---
 title: Live Oak High School
 market: K–12
-details: 'Livingston Parish - Architect: Gasaway Gasaway Bankston'
+details: 'Livingston Parish · Architect: Gasaway Gasaway Bankston'
 status: ''
 systems:
   - electrical

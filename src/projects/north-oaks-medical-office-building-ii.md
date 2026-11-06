@@ -1,7 +1,7 @@
 ---
 title: North Oaks Medical Office Building II
 market: Healthcare
-details: 'Hammond, LA - Architect: WHLC'
+details: 'Hammond, LA · Architect: WHLC'
 status: ''
 systems:
   - electrical

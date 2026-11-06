@@ -1,7 +1,7 @@
 ---
 title: LPSS Truman Early Childhood Education Center
 market: K–12
-details: 'Lafayette, LA - Architect: Grace Design Studios'
+details: 'Lafayette, LA · Architect: Grace Design Studios'
 status: ''
 systems:
   - hvac
