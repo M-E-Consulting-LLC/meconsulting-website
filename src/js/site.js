@@ -52,8 +52,17 @@
         }
       });
     });
-    var fromHash = location.hash && tabs.filter(function (t) { return '#' + t.getAttribute('aria-controls') === location.hash; })[0];
-    if (fromHash) select(fromHash);
+    var fromHash = function () {
+      var t = location.hash && tabs.filter(function (t) { return '#' + t.getAttribute('aria-controls') === location.hash; })[0];
+      if (!t) return;
+      select(t);
+      // Bring the tab row into view (after the browser's own jump to the anchor)
+      var bar = root.querySelector('[role="tablist"]') || root;
+      var go = function () { window.scrollTo(0, bar.getBoundingClientRect().top + window.pageYOffset - 96); };
+      go(); setTimeout(go, 0); window.addEventListener('load', go, { once: true });
+    };
+    fromHash();
+    window.addEventListener('hashchange', fromHash);
   });
 
   // Filter buttons (Team departments, Careers offices)

@@ -112,14 +112,25 @@ description: "M&E Consulting designs mechanical, electrical, plumbing, fire prot
         <p class="eyebrow">Selected Work</p>
         <h2 class="display">Built across every market.</h2>
       </div>
-      <a class="btn btn-outline" href="/projects/">All Projects by Market</a>
+      <a class="btn btn-primary" href="/projects/">View all {{ collections.projects.length }} projects <span aria-hidden="true">&rarr;</span></a>
     </div>
+    <nav class="market-strip" aria-label="Browse projects by market">
+      <span class="market-strip-label">Browse by market</span>
+      <ul>
+        {%- for m in markets %}{% set n = (collections.projects | inMarket(m)).length %}{% if n %}
+        <li><a href="/projects/#{{ m | slugify }}">{{ m }} <span class="n">{{ n }}</span></a></li>
+        {%- endif %}{% endfor %}
+      </ul>
+    </nav>
     <div class="cards large">
+      {%- set linkMarket = true -%}
       {%- for slug in home.selected_work %}
         {%- set p = collections.projects | projectBySlug(slug) -%}
         {%- if p %}{% include "project-card.njk" %}{% endif -%}
       {%- endfor %}
+      {%- set linkMarket = false -%}
     </div>
+    <p class="work-more"><a class="btn btn-primary" href="/projects/">View all {{ collections.projects.length }} projects <span aria-hidden="true">&rarr;</span></a></p>
   </div>
 </section>
 

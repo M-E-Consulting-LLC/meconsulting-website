@@ -1,25 +1,37 @@
-{#- One project card. Expects `p` (a project from collections.projects) and optional `tagText`. -#}
+{#- One project card. Expects `p` (a project from collections.projects), optional `tagText`,
+    and optional `linkMarket` (homepage): the market tag and card text then link to that market's tab. -#}
 {%- set d = p.data -%}
+{%- set marketHref = "/projects/#" + (d.market | slugify) -%}
 {%- set tagLabel = tagText or d.market -%}
 {%- if d.status %}{% set tagLabel = tagLabel + " · " + d.status %}{% endif -%}
-<article class="card">
+<article class="card{% if linkMarket %} card-linked{% endif %}">
   {%- if d.photos and d.photos.length %}
   <button type="button" class="card-photo" data-gallery="{{ d.photos | json }}" data-title="{{ d.title }}"
     aria-label="{% if d.photos.length > 1 %}View {{ d.photos.length }} photos of {{ d.title }}{% else %}Enlarge photo of {{ d.title }}{% endif %}">
     <img src="{{ d.photos[0] }}" alt="{{ d.title }}" loading="lazy">
-    <span class="tag">{{ tagLabel }}</span>
+    {%- if not linkMarket %}<span class="tag">{{ tagLabel }}</span>{% endif %}
+    <span class="zoom" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>{% if d.photos.length > 1 %}View photos{% else %}Enlarge{% endif %}</span>
     {%- if d.photos.length > 1 %}
     <span class="count"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="14" height="14"/><path d="M3 17V3h14"/></svg>{{ d.photos.length }} PHOTOS</span>
     {%- endif %}
   </button>
   {%- else %}
-  <div class="card-nophoto" aria-hidden="true"><span class="tag">{{ tagLabel }}</span><img src="/images/me-logo.jpg" alt="" class="nophoto-logo"></div>
+  <div class="card-nophoto" aria-hidden="true">{% if not linkMarket %}<span class="tag">{{ tagLabel }}</span>{% endif %}<img src="/images/me-logo.jpg" alt="" class="nophoto-logo"></div>
   {%- endif %}
+  {%- if linkMarket %}<a class="tag card-tag" href="{{ marketHref }}" aria-label="All {{ d.market }} projects">{{ tagLabel }}</a>{% endif %}
   <ul class="chips" aria-label="Systems M&amp;E designed">
     {%- for s in d.systems %}{% if disciplines[s] %}<li><img src="{{ disciplines[s].icon }}" alt="">{{ disciplines[s].label }}</li>{% endif %}{% endfor %}
   </ul>
+  {%- if linkMarket %}
+  <a class="card-body card-body-link" href="{{ marketHref }}">
+    <h3>{{ d.title }}</h3>
+    {%- if d.details %}<p>{{ d.details }}</p>{% endif %}
+    <span class="more">More {{ d.market }} projects <span aria-hidden="true">&rarr;</span></span>
+  </a>
+  {%- else %}
   <div class="card-body">
     <h3>{{ d.title }}</h3>
     {%- if d.details %}<p>{{ d.details }}</p>{% endif %}
   </div>
+  {%- endif %}
 </article>
