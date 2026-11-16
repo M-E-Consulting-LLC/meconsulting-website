@@ -4,7 +4,7 @@ credentials: "E.I."
 title: "Mechanical Project Manager"
 department: "Mechanical"
 leader: false
-email: ""
+email: "gabrielle@meconsulting.com"
 photo: "/images/team/gabrielle-wehner.jpg"
 order: 3
 ---
