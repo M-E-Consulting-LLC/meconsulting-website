@@ -1,7 +1,7 @@
 ---
 title: "City Docks Berths 4, 5 and 6 Wharf and Shed Reconstruction"
 market: "Industrial"
-details: "Port of Lake Charles · Lake Charles, LA · Civil Engineer: Meyer & Associates"
+details: "Port of Lake Charles · Lake Charles, LA · Architect: Cohesion Architects · Civil Engineer: Meyer & Associates"
 status: ""
 systems:
   - hvac
