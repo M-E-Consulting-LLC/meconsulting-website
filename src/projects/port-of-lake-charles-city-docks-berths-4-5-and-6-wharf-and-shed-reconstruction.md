@@ -8,6 +8,7 @@ systems:
   - plumbing
   - electrical
   - lighting
+  - fire-alarm
 photos:
   - /images/projects/port-of-lake-charles-city-docks-berths-4-5-and-6-wharf-and-shed-reconstruction/01.jpg
   - /images/projects/port-of-lake-charles-city-docks-berths-4-5-and-6-wharf-and-shed-reconstruction/02.jpg
