@@ -219,7 +219,7 @@ p { margin: 0; }
 /* Team */
 .leaders { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 24px; }
 .leader { display: flex; flex-wrap: wrap; border: 1px solid var(--line); background: #fff; }
-.leader img { width: 200px; flex: 0 0 200px; height: 250px; object-fit: cover; }
+.leader img { width: 200px; flex: 0 0 200px; height: 250px; object-fit: cover; object-position: 50% 15%; }
 .leader .body { flex: 1 1 260px; min-width: 0; padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
 .leader h2 { font-family: var(--display); font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1.1; text-transform: uppercase; }
 .leader h2 small { font-family: var(--sans); font-size: 15px; font-weight: 400; text-transform: none; }
@@ -227,7 +227,7 @@ p { margin: 0; }
 .leader .note { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; color: var(--navy); }
 .leader .bio { font-size: 15px; }
 .leader a.mail { font-weight: 600; font-size: 14px; margin-top: auto; }
-@media (max-width: 560px) { .leader img { width: 100%; flex-basis: 100%; height: 320px; } }
+@media (max-width: 560px) { .leader img { width: 100%; flex-basis: 100%; height: auto; aspect-ratio: 4 / 5; } }
 .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 20px; }
 .person { background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; }
 .person img, .person .initials { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
