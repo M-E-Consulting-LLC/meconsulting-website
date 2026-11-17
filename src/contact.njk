@@ -23,6 +23,9 @@ description: "Contact M&E Consulting in Lafayette, LA and Houston, TX about your
       {%- endfor %}
       <a href="tel:{{ site.phone_link }}" style="font-family: var(--display); font-size: 36px; font-weight: 700; color: var(--navy); text-decoration: none; line-height: 1;">{{ site.phone }}</a>
       <p style="font-size: 15px;">{{ site.hours }}</p>
+      {%- if site.capability_statement %}
+      <a class="btn btn-outline" href="{{ site.capability_statement }}">Download Capability Statement (PDF)</a>
+      {%- endif %}
     </div>
     <form class="form main" name="project-inquiry" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company-website">
       <input type="hidden" name="form-name" value="project-inquiry">

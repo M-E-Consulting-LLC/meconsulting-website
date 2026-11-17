@@ -54,6 +54,14 @@ description: "M&E Consulting designs mechanical, electrical, plumbing, fire prot
   </div>
   {%- endif %}
 </section>
+{%- if site.capability_statement %}
+<section class="fed-strip" aria-label="Federal contracting information">
+  <div class="wrap fed-strip-inner">
+    <p class="fed-ids mono"><span><b>SDVOSB</b> SBA Certified</span><span><b>CAGE</b> 86GH1</span><span><b>UEI</b> CWVJVXPSBM64</span><span><b>NAICS</b> 541330</span></p>
+    <a class="btn btn-primary" href="{{ site.capability_statement }}">Download Capability Statement <span aria-hidden="true">&darr;</span></a>
+  </div>
+</section>
+{%- endif %}
 
 <section id="services" class="section blueprint-light">
   <div class="wrap split">

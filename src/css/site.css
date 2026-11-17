@@ -300,3 +300,12 @@ p { margin: 0; }
   html { scroll-behavior: auto; }
   .hero-stage img, .card-photo img { transition: none; }
 }
+
+/* Federal buyers: capability statement callouts */
+.fed-strip { background: var(--tint, #e3f1fa); border-bottom: 3px solid var(--sky); }
+.fed-strip-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; padding-top: 16px; padding-bottom: 16px; }
+.fed-ids { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 13px; letter-spacing: .04em; color: var(--navy); }
+.fed-ids b { font-weight: 500; color: var(--blue); }
+.fed-callout { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; margin: -8px 0 28px; padding: 16px 20px; border: 1px solid var(--line); background: var(--wash); }
+.fed-callout p { margin: 0; color: var(--navy); }
+.fed-callout .mono { display: inline-block; font-size: 13px; color: var(--blue); }

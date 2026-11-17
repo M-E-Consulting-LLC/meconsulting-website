@@ -28,6 +28,12 @@ description: "MEP and technology engineering projects by M&E Consulting across h
     {%- if list.length %}
     <div class="tab-panel" role="tabpanel" id="{{ m | slugify }}" aria-labelledby="tab-{{ m | slugify }}" {% if not loop.first %}hidden{% endif %}>
       <h2 class="display" style="font-size: clamp(32px, 4vw, 44px); margin-bottom: 24px;">{{ m }}</h2>
+      {%- if m == "Federal / VA" and site.capability_statement %}
+      <div class="fed-callout">
+        <p><strong>Service-Disabled Veteran-Owned Small Business.</strong> <span class="mono">CAGE 86GH1 · UEI CWVJVXPSBM64 · NAICS 541330</span></p>
+        <a class="btn btn-primary" href="{{ site.capability_statement }}">Download Capability Statement <span aria-hidden="true">&darr;</span></a>
+      </div>
+      {%- endif %}
       <div class="cards">
         {%- for p in list %}{% include "project-card.njk" %}{% endfor %}
       </div>
