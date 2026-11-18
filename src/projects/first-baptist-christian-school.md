@@ -12,5 +12,11 @@ systems:
   - fire-protection
 photos:
   - /images/projects/first-baptist-christian-school/01.jpg
+  - /images/projects/first-baptist-christian-school/02.jpg
+  - /images/projects/first-baptist-christian-school/03.jpg
+  - /images/projects/first-baptist-christian-school/04.jpg
+  - /images/projects/first-baptist-christian-school/05.jpg
+  - /images/projects/first-baptist-christian-school/06.jpg
+  - /images/projects/first-baptist-christian-school/07.jpg
 order: 1
 ---
