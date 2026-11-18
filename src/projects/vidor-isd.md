@@ -1,7 +1,7 @@
 ---
 title: "Vidor High School Additions"
 market: K–12
-details: 'Vidor, TX · Architect: Architects Inc.'
+details: 'Vidor ISD · Vidor, TX · Architect: Architects Inc.'
 status: Under construction
 systems:
   - hvac
