@@ -1,5 +1,5 @@
 ---
-title: Vidor ISD Additions
+title: "Pine Forest Elementary School Additions"
 market: K–12
 details: 'Vidor, TX · Architect: Architects Inc.'
 status: Under construction
