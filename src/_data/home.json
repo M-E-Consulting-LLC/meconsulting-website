@@ -3,27 +3,99 @@
   "hero_headline": "Engineering Environments.",
   "hero_intro": "A service-disabled veteran-owned MEP and technology engineering firm in Lafayette and Houston, designing the systems inside the buildings our communities depend on since 1997.",
   "stats": [
-    { "label": "Projects", "value": "5,000+" },
-    { "label": "Since", "value": "1997" },
-    { "label": "Offices", "value": "Lafayette · Houston" }
+    {
+      "label": "Projects",
+      "value": "5,000+"
+    },
+    {
+      "label": "Since",
+      "value": "1997"
+    },
+    {
+      "label": "Offices",
+      "value": "Lafayette · Houston"
+    }
   ],
   "hero_slides": [
-    { "project": "lafayette-regional-airport-new-terminal", "photo": "/images/projects/lafayette-regional-airport-new-terminal/02.jpg", "focus": "50% 50%" },
-    { "project": "mcneese-state-university-student-union", "photo": "/images/projects/mcneese-state-university-student-union/01.jpg", "focus": "50% 75%" },
-    { "project": "southeastern-louisiana-university-d-vickers-hall", "photo": "/images/projects/southeastern-louisiana-university-d-vickers-hall/01.jpg", "focus": "50% 60%" }
+    {
+      "project": "lafayette-regional-airport-new-terminal",
+      "photo": "/images/projects/lafayette-regional-airport-new-terminal/02.jpg",
+      "focus": "50% 50%"
+    },
+    {
+      "project": "mcneese-state-university-student-union",
+      "photo": "/images/projects/mcneese-state-university-student-union/01.jpg",
+      "focus": "50% 75%"
+    },
+    {
+      "project": "southeastern-louisiana-university-d-vickers-hall",
+      "photo": "/images/projects/southeastern-louisiana-university-d-vickers-hall/01.jpg",
+      "focus": "50% 60%"
+    }
   ],
   "services_heading": "Every system a building depends on.",
   "services_intro": "Mechanical, electrical, plumbing, fire protection and the technology systems that tie a facility together, so architects and owners coordinate with one firm from kickoff to closeout.",
   "services": [
-    { "name": "HVAC", "icon": "/images/icons/hvac.svg", "text": "New systems, equipment assessments and temporary cooling during transitions." },
-    { "name": "Plumbing", "icon": "/images/icons/plumbing.svg", "text": "Domestic water, sanitary, storm, and water and wastewater systems." },
-    { "name": "Fire Protection", "icon": "/images/icons/fire-protection.svg", "text": "Sprinkler systems coordinated with the building's life-safety design." },
-    { "name": "Power & Emergency Power", "icon": "/images/icons/electrical.svg", "text": "Service, distribution, generators and standby power." },
-    { "name": "Lighting", "icon": "/images/icons/lighting.svg", "text": "Interior, exterior and sports lighting, with controls." },
-    { "name": "Fire Alarm", "icon": "/images/icons/fire-alarm.svg", "text": "Addressable fire alarm and emergency voice/alarm communication." },
-    { "name": "Security", "icon": "/images/icons/security.svg", "text": "Surveillance, intrusion detection and access control." },
-    { "name": "Structured Cabling", "icon": "/images/icons/special-systems.svg", "text": "Voice, data, intercom, paging and low-voltage infrastructure." },
-    { "name": "Water / Wastewater", "icon": "/images/icons/water.svg", "text": "Systems for municipal and facility clients." }
+    {
+      "name": "HVAC",
+      "icon": "/images/icons/hvac.svg",
+      "text": "New systems, equipment assessments and temporary cooling during transitions."
+    },
+    {
+      "name": "Plumbing",
+      "icon": "/images/icons/plumbing.svg",
+      "text": "Domestic water, sanitary, storm, and water and wastewater systems."
+    },
+    {
+      "name": "Fire Protection",
+      "icon": "/images/icons/fire-protection.svg",
+      "text": "Sprinkler systems coordinated with the building's life-safety design."
+    },
+    {
+      "name": "Power & Emergency Power",
+      "icon": "/images/icons/electrical.svg",
+      "text": "Service, distribution, generators and standby power."
+    },
+    {
+      "name": "Lighting",
+      "icon": "/images/icons/lighting.svg",
+      "text": "Interior, exterior and sports lighting, with controls."
+    },
+    {
+      "name": "Fire Alarm",
+      "icon": "/images/icons/fire-alarm.svg",
+      "text": "Addressable fire alarm and emergency voice/alarm communication."
+    },
+    {
+      "name": "Security",
+      "icon": "/images/icons/security.svg",
+      "text": "Surveillance, intrusion detection and access control."
+    },
+    {
+      "name": "Structured Cabling",
+      "icon": "/images/icons/special-systems.svg",
+      "text": "Voice, data, intercom, paging and low-voltage infrastructure."
+    },
+    {
+      "name": "Water / Wastewater",
+      "icon": "/images/icons/water.svg",
+      "text": "Systems for municipal and facility clients."
+    },
+    {
+      "name": "MEP Systems Assessment",
+      "icon": "/images/icons/assessment.svg",
+      "text": "Condition surveys of existing mechanical, electrical and plumbing systems, with prioritized recommendations for repair or replacement."
+    },
+    {
+      "name": "Storm Damage Assessment",
+      "icon": "/images/icons/storm.svg",
+      "text": "Post-storm evaluation of building systems to document damage and guide repairs."
+    },
+    {
+      "name": "Third-Party Fire Protection Review",
+      "icon": "/images/icons/review.svg",
+      "text": "Independent review of fire protection designs and submittals for owners and agencies."
+    }
   ],
   "featured_project": "mcneese-state-university-student-union",
   "featured_photographer": "Chipper Hatter",
@@ -41,9 +113,18 @@
   "licensed_states": "AL · AR · FL · LA · MS · MT · OK · TX · WA",
   "work_states": "AZ · IL · MO · NM · NY · OH · PA · SC · SD · UT · VA · WY",
   "process": [
-    { "step": "Define", "text": "Understand the owner's goals, the existing conditions and the code requirements before design starts." },
-    { "step": "Design", "text": "Coordinate every MEP and technology system with the architect into clear, biddable construction documents." },
-    { "step": "Deliver", "text": "Stay with the project through bidding and construction: submittals, RFIs and site observations to closeout." }
+    {
+      "step": "Define",
+      "text": "Understand the owner's goals, the existing conditions and the code requirements before design starts."
+    },
+    {
+      "step": "Design",
+      "text": "Coordinate every MEP and technology system with the architect into clear, biddable construction documents."
+    },
+    {
+      "step": "Deliver",
+      "text": "Stay with the project through bidding and construction: submittals, RFIs and site observations to closeout."
+    }
   ],
   "culture_heading": "Two offices. One family.",
   "culture_text": "Be humbly confident. Build open and honest relationships. Respond timely and timely delivery. Be intelligently inquisitive. Our core focus: providing comfort and protection to mankind."
