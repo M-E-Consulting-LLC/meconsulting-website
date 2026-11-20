@@ -10,6 +10,7 @@ systems:
   - lighting
   - fire-alarm
   - special-systems
-photos: []
+photos:
+  - /images/projects/lpss-lj-alleman-middle-school-expansion/01.jpg
 order: 10
 ---
