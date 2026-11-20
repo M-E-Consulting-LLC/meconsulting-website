@@ -69,13 +69,25 @@ description: "M&E Consulting designs mechanical, electrical, plumbing, fire prot
       <p class="eyebrow">Services</p>
       <h2 class="display">{{ home.services_heading }}</h2>
       <p class="lead">{{ home.services_intro }}</p>
-      <div class="dim" aria-hidden="true"><span class="tick"></span><span class="rule"></span><span class="txt">{{ home.services.length }} SERVICES</span><span class="rule"></span><span class="tick"></span></div>
+      <div class="dim" aria-hidden="true"><span class="tick"></span><span class="rule"></span><span class="txt">{{ home.services.length }} DISCIPLINES</span><span class="rule"></span><span class="tick"></span></div>
     </div>
-    <ul class="services main">
+    <div class="main">
+    <ul class="services">
       {%- for s in home.services %}
       <li><img src="{{ s.icon }}" alt=""><span class="name">{{ s.name }}</span><span class="txt">{{ s.text }}</span></li>
       {%- endfor %}
     </ul>
+    {%- if home.assessments and home.assessments.length %}
+    <div class="assessments">
+      <h3 class="assessments-head">{{ home.assessments_heading or "Assessments & Reviews" }}</h3>
+      <ul class="assessments-list">
+        {%- for s in home.assessments %}
+        <li><img src="{{ s.icon }}" alt=""><div><span class="name">{{ s.name }}</span><span class="txt">{{ s.text }}</span></div></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+    </div>
   </div>
 </section>
 

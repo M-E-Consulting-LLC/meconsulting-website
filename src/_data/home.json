@@ -80,7 +80,10 @@
       "name": "Water / Wastewater",
       "icon": "/images/icons/water.svg",
       "text": "Systems for municipal and facility clients."
-    },
+    }
+  ],
+  "assessments_heading": "Assessments & Reviews",
+  "assessments": [
     {
       "name": "Existing MEP Systems Assessment",
       "icon": "/images/icons/assessment.svg",

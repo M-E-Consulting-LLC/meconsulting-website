@@ -186,6 +186,15 @@ collections:
               - { label: Name, name: name, widget: string }
               - { label: Icon, name: icon, widget: image }
               - { label: Description, name: text, widget: string }
+          - { label: Assessments heading, name: assessments_heading, widget: string, required: false }
+          - label: Assessments & reviews
+            name: assessments
+            widget: list
+            required: false
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Icon, name: icon, widget: image }
+              - { label: Description, name: text, widget: string }
           - { label: Featured project, name: featured_project, widget: relation, collection: projects, value_field: '{{slug}}', search_fields: [title], display_fields: [title] }
           - { label: Featured project photographer, name: featured_photographer, widget: string, required: false }
           - { label: Featured project story, name: featured_story, widget: text, required: false, hint: "Two sentences: the challenge, and what M&E's systems made possible." }

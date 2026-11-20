@@ -309,3 +309,12 @@ p { margin: 0; }
 .fed-callout { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; margin: -8px 0 28px; padding: 16px 20px; border: 1px solid var(--line); background: var(--wash); }
 .fed-callout p { margin: 0; color: var(--navy); }
 .fed-callout .mono { display: inline-block; font-size: 13px; color: var(--blue); }
+
+/* Assessments & Reviews: secondary row under the discipline grid */
+.assessments { margin-top: 28px; background: var(--wash); border: 1px solid var(--line); border-top: 3px solid var(--sky); padding: 20px 24px 24px; }
+.assessments-head { margin: 0 0 16px; font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.assessments-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px 28px; }
+.assessments-list li { display: flex; gap: 12px; align-items: flex-start; }
+.assessments-list img { width: 26px; height: 26px; flex: 0 0 26px; margin-top: 2px; }
+.assessments-list .name { display: block; font-family: var(--display); font-size: 19px; font-weight: 700; line-height: 1.15; text-transform: uppercase; color: var(--navy); margin-bottom: 4px; }
+.assessments-list .txt { display: block; font-size: 14px; line-height: 1.5; }
