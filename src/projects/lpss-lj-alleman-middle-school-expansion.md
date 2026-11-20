@@ -12,5 +12,6 @@ systems:
   - special-systems
 photos:
   - /images/projects/lpss-lj-alleman-middle-school-expansion/01.jpg
+  - /images/projects/lpss-lj-alleman-middle-school-expansion/02.jpg
 order: 10
 ---
